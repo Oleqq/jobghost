@@ -1,0 +1,47 @@
+.ui-button {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 112%;
+    text-align: center;
+    padding: 14px 24px;
+    border-radius: 67px;
+    
+    border: none;
+    outline: none;
+
+    a {
+        text-decoration: none;
+    }
+
+
+    @media (max-width:768px) {
+        padding: 7px 12px;
+    }
+    
+
+    &-orange {
+        background: var(--color);
+        
+        color: var(--secondary-color-1);
+
+        a {
+            color: var(--secondary-color-1);
+        }
+
+        
+    }
+    &-transparent {
+        
+        a {
+            color: var(--secondary-color-1);
+        }
+
+    }
+    &-white {
+        background: var(--secondary-color-1);
+        a {
+            color: var(--primary-accent);
+        }
+    }
+}

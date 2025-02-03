@@ -3,21 +3,81 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body> 
     <header class="header">
-      <div class="container"> 
-        <div class="header__wrapper"> 
-          <div class="header__logo"> </div>
+      <div class="container header__container">
+        <div class="header__wrapper"> <a class="header__logo" href="/"><img src="./img/ghostlogo-white 2 (1).png" alt=""></a>
           <nav class="header__nav">
             <ul>
-              <li><a href="#"> </a></li>
+              <li><a href="#">Home </a></li>
+              <li> <a href="#">About </a></li>
+              <li> <a href="#">Contact</a></li>
+              <li><a href="#">How it works   </a></li>
             </ul>
           </nav>
+          <div class="header__buttons"> 
+            <div class="ui-button ui-button-white"> <a href="">Sign up</a></div>
+            <div class="ui-button ui-button-transparent"> <a href="">Sign in</a></div>
+          </div>
+          <div class="header__burger">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+          </div>
         </div>
       </div>
     </header>
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="hero__wrapper"> 
+          <div class="hero__title">
+            <h1>WERE YOU<br>GH<span>O</span>STED ?</h1>
+          </div>
+          <div class="hero__button"><a href="">YES | NO  </a></div>
+          <div class="hero__bottom"> 
+            <div class="hero__text"> 
+              <div class="hero__subtitle"> 
+                <h5>See if a company is likely to keep in touch or disappear...</h5>
+              </div>
+              <div class="hero__paragraph"> 
+                <p>Job Ghost: Empowering job seekers with transparent company ratings and a unique color-coded system to predict interview ghosting. </p>
+              </div>
+            </div>
+            <div class="hero__bottom--img"> <img src="./img/ghost2 1.png" alt=""></div>
+          </div>
+          <div class="hero-search"> 
+            <div class="hero-search__wrapper"> 
+              <div class="hero-search__dropdown hero-search__dropdown-first">
+                <select name="">
+                  <option value="1"> </option>
+                  <option value="2"></option>
+                  <option value="3">  </option>
+                </select>
+              </div>
+              <div class="hero-search__dropdown hero-search__dropdown-second">  
+                <select name="">
+                  <option value="1"> </option>
+                  <option value="2"></option>
+                  <option value="3">  </option>
+                </select>
+              </div>
+              <div class="hero-search__search"><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.56396 12.513C2.56396 15.2055 3.63356 17.7878 5.53744 19.6917C7.44133 21.5955 10.0235 22.6651 12.716 22.6651C15.4085 22.6651 17.9908 21.5955 19.8947 19.6917C21.7985 17.7878 22.8681 15.2055 22.8681 12.513C22.8681 9.82055 21.7985 7.23832 19.8947 5.33444C17.9908 3.43055 15.4085 2.36096 12.716 2.36096C10.0235 2.36096 7.44133 3.43055 5.53744 5.33444C3.63356 7.23832 2.56396 9.82055 2.56396 12.513V12.513Z" stroke="#8C8C9E" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M19.894 19.6909L24.7769 24.5738" stroke="#8C8C9E" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+                <input type="text" name="" placeholder="Search for companies...">
+                <button class="ui-button ui-button-orange" type="submit">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
+  <script src="./js/index.js"> </script>
 </html>
