@@ -5,6 +5,8 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
 
+        //- swiper.css
+        link(rel="stylesheet", href="./css/swiper-bundle.min.css")
 
         //- Fonts
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,9 +22,24 @@ html(lang="en")
         //- Hero
         include ../components/hero/hero.pug
 
+        //- featured-companies
+        include ../components/featured-companies/featured-companies.pug
+
+        //- Testimonials
+        include ../components/testimonials/testimonials.pug
+
+        //- Post-Blocks
+        include ../components/post-blocks/post-blocks.pug
+
         //- Footer
         include ../components/footer/footer.pug
 
+
+    //- jquery
+    script(src="./js/jquery-3.6.0.min.js") 
+
+    //- swiper.js
+    script(src="./js/swiper-bundle.min.js") 
 
     //- scripts
     script(src="./js/index.js") 

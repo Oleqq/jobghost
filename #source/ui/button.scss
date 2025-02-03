@@ -20,6 +20,8 @@
     }
     
 
+    
+
     &-orange {
         background: var(--color);
         
@@ -43,5 +45,27 @@
         a {
             color: var(--primary-accent);
         }
+    }
+}
+
+.ui-button-link {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-align: center;
+    color: var(--neutral-500);
+
+    a {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 114%;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        text-align: center;
+        color: var(--neutral-500);
     }
 }

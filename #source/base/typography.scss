@@ -1,0 +1,11 @@
+.section__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    @include adaptiveValue(font-size, 32px, 24px, 1440px, 375px);
+    line-height: 144%;
+    
+
+    &.black {
+        color: var(--neutral-800);
+    }
+}
