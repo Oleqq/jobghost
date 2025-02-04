@@ -1,0 +1,69 @@
+.footer-cta {
+    background: var(--color);
+
+    @include adaptiveValue(padding-top, 62px, 42px, 1440px, 467px);
+    @include adaptiveValue(padding-bottom, 62px, 42px, 1440px, 467px);
+
+    border-bottom: 1.02px solid var(--neutral-300);
+
+    &__container {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @media (max-width:867px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+    }   
+
+    &__title {
+        font-family: var(--font-family);
+        font-weight: 600;
+        @include adaptiveValue(font-size, 16px, 15px, 1440px, 375px);
+        line-height: 175%;
+        color: var(--secondary-color-1);
+    }
+
+    &__input {
+        position: relative;
+        max-width: 520px;
+        width: 100%;
+
+        input {
+            width: 100%;
+            border: 1.02px solid var(--neutral-300);
+            border-radius: 102px;
+            padding: 24px 24px;
+
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            color: #000; 
+            
+            &::placeholder {
+                font-family: var(--font-family);
+                font-weight: 600;
+                @include adaptiveValue(font-size, 16px, 14px, 1440px, 375px);
+                line-height: 100%;
+                color: var(--neutral-500);
+            }
+        }
+
+        button {
+            position: absolute;
+
+            height: 66%;
+            right: 10px;
+            bottom: 13px;
+        }
+    }
+}

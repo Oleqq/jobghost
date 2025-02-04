@@ -1,0 +1,111 @@
+.footer {
+    background: var(--color);
+
+    border-bottom: 1.02px solid var(--neutral-300);
+
+    &__container {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    &__wrapper {
+        
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 0;
+
+        @media (max-width:767px) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        p {
+            font-family: var(--font-family);
+            font-weight: 600;
+            @include adaptiveValue(font-size, 16px, 14px, 1440px, 375px);
+            line-height: 175%;
+            text-align: right;
+            color: var(--secondary-color-1);
+
+
+            max-width: 500px;
+        }
+        h6 {
+            font-family: var(--font-family);
+            font-weight: 500;
+            @include adaptiveValue(font-size, 18px, 16px, 1440px, 375px);
+            line-height: 144%;
+            color: var(--neutral-800);
+
+            margin-bottom: 32px;
+        }
+    }
+
+    &__text {
+
+        @media (max-width:767px) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__nav {
+        display: flex;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        ul li a {
+            font-family: var(--font-family);
+            font-weight: 600;
+            @include adaptiveValue(font-size, 16px, 15px, 1440px, 375px);
+            line-height: 100%;
+            color: var(--neutral-600);
+
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+.footer-bottom {
+    background: var(--color);
+    padding: 32px 0;
+
+    &__container {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width:567px) {
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+    &__copyright {
+        font-family: var(--font-family);
+        font-weight: 600;
+        @include adaptiveValue(font-size, 16px, 13px, 1440px, 375px);
+        line-height: 175%;
+        color: var(--neutral-600); 
+    }
+    &__socials {
+        display: flex;
+        gap: 12px;
+
+        img {
+            width: 100%;
+            display: flex;
+            object-fit: cover;
+        }
+    }
+}
