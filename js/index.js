@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     const swiper = new Swiper('.testimonials__slider ', {
         slidesPerView: 3, 
-        loop: true,
+
         speed: 600,
         spaceBetween: 20,
         navigation: {

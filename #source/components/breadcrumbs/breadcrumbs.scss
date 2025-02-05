@@ -1,0 +1,26 @@
+.breadcrumbs-prev {
+    @include adaptiveValue(padding-top, 45px, 24px, 1440px, 567px);
+    @include adaptiveValue(padding-bottom, 28px, 18px, 1440px, 567px);
+    @include adaptiveValue(margin-left, 133px, 24px, 1440px, 991px);
+
+    &__container {
+
+    }
+
+    &__wrapper {
+
+        a {
+            font-family: var(--font-family);
+            font-weight: 500;
+            @include adaptiveValue(font-size, 16px, 12px, 1440px, 567px);
+            line-height: 125%;
+            color: var(--primary-accent);
+
+            transition: .2s ease;
+
+            cursor: pointer;
+
+            text-decoration: none;
+        }
+    }
+}

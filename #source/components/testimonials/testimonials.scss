@@ -142,7 +142,7 @@
             }
 
             .testimonials__slider__button {
-
+                cursor: pointer;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -153,8 +153,25 @@
 
                 height: fit-content;
 
-                &-prev {
+                user-select: none; 
+                outline: none;
+                -webkit-user-select: none; /* Safari */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* Internet Explorer / Edge */
+                -webkit-tap-highlight-color: transparent; 
+                touch-action: manipulation; 
+
+                &.swiper-button-disabled {
                     border: 0.86px solid #13324070;
+                    .text {
+                        color: #133240;
+                        opacity: .2;
+                       
+                    }
+                }
+
+                &-prev {
+                    border: 0.86px solid #133240;
 
                     svg {
                         transform: rotate(180deg);
@@ -162,7 +179,7 @@
 
                     .text {
                         color: #133240;
-                        opacity: .2;
+                        
                     }
 
                     &:hover {

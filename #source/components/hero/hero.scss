@@ -50,18 +50,31 @@
                     background-image: url('../img/ghost(1).png');
                     display: flex;
                     position: absolute;
-                    width: 80px;
-                    height: 80px;
+                    @include adaptiveValue(width, 80px, 52px, 1440px, 375px);
+                    @include adaptiveValue(height, 80px, 52px, 1440px, 375px);
                     object-fit: cover;
                     background-size: contain;
-                    left: 0;
                     right: 0;
+                    left: 0;
                     top: 20%;
                     background-position: center;
 
                     z-index: 5;
 
+                    @media (max-width:1280px) {
+                        left: -1.5px;
+                    }
+                    @media (max-width:991px) {
+                        top: 18%;
+                        left: -3px;
+                        
+                    }
                     
+                    @media (max-width:676px) {
+                        top: 15%;
+                        left: -6px;
+                        
+                    }
                 }
                 
             }
