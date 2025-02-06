@@ -75,10 +75,17 @@
     &__burger {
         width: 30px;
         height: 24px;
-        display: flex;
+        
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
+
+        display: none;
+        
+
+        @media (max-width:867px) {
+            display: flex;
+        }
     
         .burger__line {
             width: 100%;

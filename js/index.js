@@ -67,3 +67,36 @@ $(document).ready(function () {
   
     updateClasses();
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.company-single__tab');
+  const contents = document.querySelectorAll('[data-content]');
+
+  tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+         
+          tabs.forEach(t => t.classList.remove('active'));
+
+       
+          contents.forEach(content => {
+              content.style.display = 'none';
+          });
+
+        
+          this.classList.add('active');
+
+         
+          const target = this.getAttribute('data-target');
+          const contentToShow = document.querySelector(`[data-content="${target}"]`);
+          if (contentToShow) {
+              contentToShow.style.display = 'block';
+          }
+      });
+  });
+
+
+  if (tabs.length > 0) {
+      tabs[0].click();
+  }
+});

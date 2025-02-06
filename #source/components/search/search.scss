@@ -1,0 +1,174 @@
+.search {
+    background: var(--neutral-200);
+    
+    padding-bottom: 400px;
+
+    &__container {
+        max-width: 1190px;
+        padding: 0 20px;
+        margin: 0 auto;
+
+        @media (max-width:467px) {
+            padding: 0 16px;
+        }
+    }
+}
+
+.search-results {
+
+    margin-top: 32px;
+
+    max-width: 850px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @media (max-width:676px) {
+        padding: 0;
+    }
+
+    &__title {
+        font-family: var(--font-family);
+        font-weight: 500;
+        @include adaptiveValue(font-size, 32px, 24px, 1440px, 567px);
+        line-height: 144%;
+        color: var(--neutral-800);    
+
+        margin-top: 32px;
+        margin-bottom: 24px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__result {
+        display: flex;
+        // padding: 24px 16px;
+        box-shadow: 0 2px 6px 0 rgba(8, 15, 52, 0.04);
+        background: var(--secondary-color-1);
+        border: 1px solid var(--neutral-300);
+        border-radius: 12px;
+
+        @include adaptiveValue (padding-top, 24px, 16px, 991px, 467px);
+        @include adaptiveValue (padding-right, 16px, 10px, 991px, 467px);
+        @include adaptiveValue (padding-bottom, 24px, 16px, 991px, 467px);
+        @include adaptiveValue (padding-left, 16px, 10px, 991px, 467px);
+
+        .col {
+            justify-content: center;
+
+
+            &:first-of-type {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+
+            &_title {
+                flex: 4;
+                @include adaptiveValue (margin-left, 24px, 12px, 991px, 467px);
+                gap: 8px;
+
+                @media (max-width:767px) {
+                    flex: 2;
+                }
+
+                a {
+                    font-family: var(--font-family);
+                    font-weight: 600;
+                    @include adaptiveValue (font-size, 14px, 12px, 991px, 467px);
+                    line-height: 114%;
+                    text-decoration: underline;
+                    text-decoration-skip-ink: none;
+                    color: var(--neutral-800);
+    
+                    text-underline-offset: 2px;
+    
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                }
+            }
+            &__score {
+                flex: 2;
+                gap: 14px;
+                position: relative;
+                top: 6px;
+
+                a {
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    @include adaptiveValue (font-size, 16px, 12px, 991px, 467px);
+                    line-height: 125%;
+                    color: var(--neutral-800);  
+                    
+                    text-decoration: none;
+                }
+            }
+            &__color {
+                flex: 3;
+                gap: 14px;
+
+                @media (max-width:767px) {
+                    flex: 2;
+                }
+
+                a {
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    @include adaptiveValue (font-size, 16px, 12px, 991px, 467px);
+                    line-height: 125%;
+                    color: var(--neutral-800);  
+                    
+                    text-decoration: none;
+                }
+            }
+
+            
+
+            img {
+                display: flex;
+                object-fit: cover;
+                @include adaptiveValue (max-width, 58px, 42px, 991px, 467px);
+                @include adaptiveValue (max-height, 58px, 42px, 991px, 467px);
+
+            }
+
+            h4 {
+                font-family: var(--font-family);
+                font-weight: 500;
+                @include adaptiveValue (font-size, 16px, 15px, 991px, 467px);
+                line-height: 125%;
+                color: var(--neutral-800);
+            }
+            h5 {
+                font-family: var(--font-family);
+                font-weight: 600;
+                @include adaptiveValue (font-size, 16px, 12px, 991px, 467px);
+                line-height: 100%;
+                color: var(--neutral-600);
+
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+            h6 {
+                font-family: var(--font-family);
+                font-weight: 600;
+                @include adaptiveValue (font-size, 14px, 12px, 991px, 467px);
+                line-height: 114%;
+                color: var(--neutral-600);
+
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                gap: 4px;
+
+                width: fit-content;
+            }
+            
+        }
+    }
+}

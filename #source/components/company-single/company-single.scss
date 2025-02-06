@@ -292,4 +292,91 @@
             object-fit: cover;
         }
     }
+
+    &__score {
+        padding: 0 20px 62px;
+        padding-bottom: 62px;
+
+        max-width: 800px;
+        margin: 0 auto;
+
+
+        .score-title {
+            display: flex;
+            justify-content: center;
+            @include adaptiveValue(gap, 12px, 8px, 991px, 467px);
+
+            font-family: var(--font-family);
+            font-weight: 500;
+            @include adaptiveValue(font-size, 46px, 20px, 1440px, 390px);
+            line-height: 135%;
+            text-align: center;
+            color: var(--neutral-800);
+            
+            @include adaptiveValue(margin-bottom, 36px, 16px, 1440px, 467px);
+
+            .green {
+                color: #26e900;
+            }
+        }
+
+
+        &-bottom {
+            font-family: var(--font-family);
+            font-weight: 500;
+            @include adaptiveValue(font-size, 46px, 20px, 1440px, 390px);
+            line-height: 135%;
+            text-align: center;
+            color: #6f6f73;   
+
+            h3 {
+                @include adaptiveValue(font-size, 46px, 20px, 1440px, 390px);
+                font-family: var(--font-family);
+                font-weight: 500;
+                line-height: 135%;
+                text-align: center;
+                color: #6f6f73;
+
+                @include adaptiveValue(margin-bottom, 52px, 26px, 1440px, 467px);
+            }
+
+            ul {
+                
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                max-width: 80%;
+                align-items: center;
+                margin: 0 auto;
+                justify-content: space-between;
+                
+                @include adaptiveValue(row-gap, 16px, 8px, 1440px, 467px);
+
+                li {
+                    position: relative;
+
+                    font-family: var(--font-family);
+                    font-weight: 600;
+                    @include adaptiveValue(font-size, 16px, 12px, 1440px, 390px);
+                    line-height: 175%;
+                    color: var(--neutral-600);
+                    width: 40%;
+                    
+                    text-align: left;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: var(--primary-accent);
+
+                        top: 33%;
+                        left: -16px;
+                    }
+                }
+            }
+        }
+    }
 }

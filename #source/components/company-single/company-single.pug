@@ -37,11 +37,11 @@ section.company-single
 
 
                 .company-single__tabs 
-                    .company-single__tab Company Score
-                    .company-single__tab About the company
-                    .company-single__tab Review Company
+                    .company-single__tab(data-target="score") Company Score
+                    .company-single__tab(data-target="about") About the company
+                    .company-single__tab(data-target="review") Review Company
 
-            .company-single__about
+            .company-single__about(data-content="about")
                 h5 About the company
                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus augue sagittis erat consectetur est. Blandit blandit nec mauris pulvinar. Lectus duis amet tortor, sit tincidunt. Rhoncus tincidunt imperdiet penatibus vitae risus, vitae. 
                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus dictum ultrices lacus sodales nunc felis eu, consectetur arcu. Vitae nulla scelerisque id 
@@ -168,7 +168,24 @@ section.company-single
                                         </defs>
                         </svg>
                     </div>
+            .company-single__score(data-content="score") 
+                .score-title Company Ghost Score <div class="green">9.0</div>
+                
+                .company-single__score-bottom 
+                    h3 HIGHLY UNLIKELY TO GHOST YOU
+
+                    ul 
+                        li Transparent Communication
+                        li Established Feedback Loops
+                        li Structured Interview Process
+
+                        li Dedicated Recruitment Team
+                        li Company Culture of Respect
+                        li Candidate Experience Focus
+
+              
 
 
+            .company-single__review(data-content="review") 
 
                         
