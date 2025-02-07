@@ -100,3 +100,22 @@ document.addEventListener('DOMContentLoaded', function() {
       tabs[0].click();
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.querySelectorAll(".slider-container").forEach(container => {
+    const slider = container.querySelector("input[type='range']");
+    const numbers = container.querySelectorAll(".numbers span");
+
+    function updateSlider() {
+      const value = parseInt(slider.value);
+      numbers.forEach(num => {
+        num.classList.toggle("active", parseInt(num.dataset.value) === value);
+      });
+    }
+
+   
+    slider.addEventListener("input", updateSlider);
+    updateSlider(); 
+  });
+});

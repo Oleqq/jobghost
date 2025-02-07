@@ -1,0 +1,48 @@
+.profile {
+  background: #f5f5f5;
+  padding: 20px;
+}
+.profile__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.profile__wrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.profile__blocks {
+  display: flex;
+  gap: 20px;
+}
+.profile__blocks-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-block__main, .profile-block__secondary, .profile-block__settings {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.link {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.big-ghost {
+  display: block;
+  margin: 0 auto;
+  max-width: 100px;
+}
+/*# sourceMappingURL=profile.css.map */

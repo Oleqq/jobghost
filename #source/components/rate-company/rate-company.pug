@@ -1,0 +1,78 @@
+section.rate-company
+    .container.rate-company__container 
+        .rate-company__wrapper 
+            .rate-company__top 
+                h3 RATE A COMPANY 
+                p CREATE A GHOSTING SCORE 
+
+                img(src="./img/ghost-2.png", alt="")
+            .rate-company-rate.rate-company__bottom
+                .rate-company-rate__top 
+                    p Company website
+                    input(type="url", name="", placeholder="https://company.com")
+
+                .rate-company-rate__guide 
+                    h3 RATING SYSTEM
+                    p 1 = Poor    5 = Fair    10 = Excellent  
+                .rate-company-rate__quiz 
+                    .rate-company-rate__step 
+                        h4 RESPONSE TIME
+                        h5 How responsive was the company to your application and inquiries during the interview process?
+                        .slider-container
+                            .numbers
+                                each val in [0,1,2,3,4,5,6,7,8,9,10]
+                                    span(data-value=val)= val
+                            input#range-slider(type="range" min="0" max="10" step="1" value="0")
+                            script(src="script.js")
+                    .rate-company-rate__step 
+                        h4 INTERVIEW SCHEDULING
+                        h5 How transparent was the company in communicating details about the application process and interview stages?
+                        .slider-container
+                            .numbers
+                                each val in [0,1,2,3,4,5,6,7,8,9,10]
+                                    span(data-value=val)= val
+                            input#range-slider(type="range" min="0" max="10" step="1" value="0")
+                            script(src="script.js")
+                    .rate-company-rate__step 
+                        h4 INTERVIEW EFFICIENCY
+                        h5 How efficient was the company at scheduling their interviews and were they respectful of your time?
+                        .slider-container
+                            .numbers
+                                each val in [0,1,2,3,4,5,6,7,8,9,10]
+                                    span(data-value=val)= val
+                            input#range-slider(type="range" min="0" max="10" step="1" value="0")
+                            script(src="script.js")
+
+                    .rate-company-rate__step 
+                        h4 POST INTERVIEW
+                        h5 Did the company provide timely updates on the status and next steps after the interview?
+                        .slider-container
+                            .numbers
+                                each val in [0,1,2,3,4,5,6,7,8,9,10]
+                                    span(data-value=val)= val
+                            input#range-slider(type="range" min="0" max="10" step="1" value="0")
+                            script(src="script.js")
+                    .rate-company-rate__step 
+                        h4 COMPANY COURTESY
+                        h5  How professional were the interviewers in terms of preparedness, courtesy, and respect?
+                        .slider-container
+                            .numbers
+                                each val in [0,1,2,3,4,5,6,7,8,9,10]
+                                    span(data-value=val)= val
+                            input#range-slider(type="range" min="0" max="10" step="1" value="0")
+                            script(src="script.js")
+                    .rate-company-rate__step 
+                        h4 OVERALL EXPERIENCE
+                        h5 How would you rate your overall interview experience with the company?
+                        .slider-container
+                            .numbers
+                                each val in [0,1,2,3,4,5,6,7,8,9,10]
+                                    span(data-value=val)= val
+                            input#range-slider(type="range" min="0" max="10" step="1" value="0")
+                            script(src="script.js")
+                
+                .rate-company-rate__comment 
+                    p Comments or review (optional)
+                    textarea(name="") 
+                .rate-company-rate__submit 
+                    button.ui-button.ui-button-orange(type="submit") Submit your score

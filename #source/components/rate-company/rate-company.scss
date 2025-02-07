@@ -1,0 +1,275 @@
+.rate-company {
+
+    @include adaptiveValue(padding-top, 74px, 52px, 1440px, 467px);
+    margin-bottom: 28px;
+
+    &__main {
+        background: #f9f6f6;    
+    }
+
+    &__container {
+
+
+    }
+    &__wrapper {
+        
+
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    &__top {
+        @include adaptiveValue(padding-bottom, 48px, 32px, 1440px, 467px);
+
+        position: relative;
+
+        img {
+            
+            width: 100%;
+            display: flex;
+            position: absolute;
+            right: 24px;
+            bottom: 0;
+            max-width: 145px;
+            max-height: 73px;
+
+            @include adaptiveValue(max-width, 145px, 100px, 1440px, 467px);
+            @include adaptiveValue(max-height, 73px, 50px, 1440px, 467px);
+        }
+        
+        h3 {
+            font-family: var(--font-family);
+            font-weight: 600;
+            @include adaptiveValue(font-size, 50px, 32px, 1440px, 467px);
+            line-height: 100%;
+            text-align: center;
+            color: var(--other-company-colors-x);   
+            margin-bottom: 0px; 
+        }
+        p {
+            font-family: var(--font-family);
+            font-weight: 600;
+            @include adaptiveValue(font-size, 20px, 16px, 1440px, 467px);
+            line-height: 175%;
+            text-align: center;
+            color: var(--primary-accent);    
+        }
+    }
+
+    &-rate {
+
+        border-radius: 24px;
+        padding: 0px 48px 64px 48px;
+
+        @include adaptiveValue(padding-left, 48px, 24px, 1440px, 467px);
+        @include adaptiveValue(padding-bottom, 64px, 48px, 1440px, 467px);
+        @include adaptiveValue(padding-right, 48px, 24px, 1440px, 467px);
+
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: #faf9f8;
+
+
+        &__top {
+            @include adaptiveValue(padding-top, 60px, 24px, 1440px, 467px);
+            max-width: 300px;
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @include adaptiveValue(margin-bottom, 290px, 92px, 1440px, 467px);
+
+            p {
+                font-family: var(--font-family);
+                font-weight: 500;
+                @include adaptiveValue(font-size, 16px, 12px, 1440px);
+                line-height: 125%;
+                text-align: center;
+                color: var(--neutral-700);
+
+                @include adaptiveValue(margin-bottom, 22px, 8px, 1440px, 467px);
+            }
+            input {
+                border: 1px solid var(--secondary-color-1);
+                border-radius: 60px;
+                padding: 10px 24px;
+                box-shadow: inset 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+                background: var(--secondary-color-1);
+
+                font-family: var(--font-family);
+                font-weight: 600;
+                @include adaptiveValue(font-size, 16px, 12px, 1440px);
+                line-height: 175%;
+                color: #000;
+
+                &::placeholder {
+                    font-family: var(--font-family);
+                    font-weight: 600;
+                    @include adaptiveValue(font-size, 16px, 12px, 1440px);
+                    line-height: 175%;
+                    color: var(--neutral-500);
+                }
+            }
+        }
+        &__guide {
+            @include adaptiveValue(margin-bottom, 112px, 54px, 1440px, 467px);
+            h3 {
+                font-family: var(--font-family);
+                font-weight: 700;
+                @include adaptiveValue(font-size, 36px, 26px, 1440px, 467px);
+                line-height: 81%;
+                text-align: center;
+                color: #747481;
+
+                margin-bottom: 16px;
+                
+            }
+            p {
+                font-family: var(--font-family);
+                font-weight: 700;
+                @include adaptiveValue(font-size, 36px, 22px, 1440px, 467px);
+                line-height: 81%;
+                text-align: center;
+                color: #747481;
+            }
+        }
+
+        &__quiz {
+            display: flex;
+            flex-direction: column;
+            @include adaptiveValue(gap, 124px, 82px, 1440px, 467px);
+            @include adaptiveValue(margin-bottom, 84px, 42px, 1440px, 467px);  
+        }
+        &__step {
+
+            h4 {
+                font-family: var(--font-family);
+                font-weight: 700;
+                @include adaptiveValue(font-size, 32px, 22px, 1440px, 467px);
+                line-height: 125%;
+                text-align: center;
+                color: #747481;
+                @include adaptiveValue(margin-bottom, 42px, 12px, 1440px, 467px);
+            }
+            h5 {
+                font-family: var(--font-family);
+                font-weight: 700;
+                @include adaptiveValue(font-size, 32px, 20px, 1440px, 390px);
+                line-height: 125%;
+                text-align: center;
+                color: var(--neutral-600);  
+                
+                @include adaptiveValue(margin-bottom, 62px, 42px, 1440px, 467px);
+            }
+        }
+        &__comment {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+
+            @include adaptiveValue(margin-bottom, 58px, 42px, 1440px, 467px);
+
+            p {
+                font-family: var(--font-family);
+                font-weight: 400;
+                @include adaptiveValue(font-size, 24px, 12px, 1440px, 467px);
+                color: #737378;    
+                margin-bottom: 8px;
+            }
+            textarea {
+                height: 200px;
+                border-radius: 11px;
+                resize: none;
+                box-shadow: inset -5px -4px 4px 0 rgba(0, 0, 0, 0.25);
+                background: rgba(9, 4, 70, 0.2);
+                @include adaptiveValue(height, 200px, 100px, 1440px, 467px);
+
+                font-family: var(--font-family);
+                font-weight: 600;
+                @include adaptiveValue(font-size, 16px, 12px, 1440px);
+                line-height: 175%;
+                color: #000;
+
+                &::placeholder {
+                    font-family: var(--font-family);
+                    font-weight: 600;
+                    @include adaptiveValue(font-size, 16px, 12px, 1440px);
+                    line-height: 175%;
+                    color: var(--neutral-500);
+                }
+            }
+        }
+        &__submit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+
+                button {
+                    padding: 28px 40px;
+                    @include adaptiveValue(padding-top, 28px, 16px, 1440px, 467px);
+                    @include adaptiveValue(padding-right, 40px, 28px, 1440px, 467px);
+                    @include adaptiveValue(padding-bottom, 28px, 16px, 1440px, 467px);
+                    @include adaptiveValue(padding-left, 40px, 28px, 1440px, 467px);
+                }
+        }
+        
+    }
+}
+
+
+
+  
+
+.slider-container {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .numbers {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    position: relative;
+    left: 0px;
+    max-width: 95%;
+    margin: 0 auto 24px;
+
+    span {
+        font-family: var(--font-family);
+        font-weight: 500;
+        @include adaptiveValue(font-size, 26px, 18px, 1440px, 467px);
+        color: rgba(0, 0, 0, 0.4);
+        transition: color 0.3s;
+            &.active {
+               
+                font-weight: 700;
+                color: var(--other-company-colors-x);
+            }
+    }
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    @include adaptiveValue(height, 8px, 4px, 1440px, 467px);
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+    
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      @include adaptiveValue(width, 64px, 32px, 1440px, 467px);
+      @include adaptiveValue(height, 42px, 20px, 1440px, 467px);
+      border-radius: 22px;
+      cursor: pointer;
+      box-shadow: 4px 0 20px 0 rgba(0, 0, 0, 0.25);
+      background: #00ff85;
+    }
+  }
