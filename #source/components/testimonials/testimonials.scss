@@ -44,7 +44,8 @@
     &__top {
         display: flex;
         justify-content: space-between;
-        @include adaptiveValue(margin-bottom, 48px, 24px, 1440px, 375px);
+        @include adaptiveValue(padding-bottom, 48px, 24px, 1440px, 375px);
+        position: relative;
 
         .text {
             h4 {
@@ -71,6 +72,8 @@
         display: flex;
         flex-direction: column;
         background: var(--secondary-color-1);
+        height: 100%;
+        
 
         @include adaptiveValue(padding-top, 22px, 14px, 1440px, 375px);
         @include adaptiveValue(padding-bottom, 22px, 14px, 1440px, 375px);
@@ -82,7 +85,28 @@
             justify-content: space-between;
             margin-bottom: 16px;
 
-            
+            .pronoun {
+                font-family: var(--font-family);
+                font-weight: 600;
+                font-size: 12px;
+                @include adaptiveValue(font-size, 12px, 8px, 1440px, 390px);
+                line-height: 233%;
+                color: var(--neutral-600);
+            }
+
+            .testimonials-card__rating {
+                font-family: var(--font-family);
+                font-weight: 600;
+                @include adaptiveValue(font-size, 16px, 10px, 1440px, 390px);
+                line-height: 175%;
+                color: var(--neutral-600);    
+
+                span:nth-child(2) {
+                    border-radius: 50%;
+                    @include adaptiveValue(width, 18px, 10px, 1440px, 390px);
+                    @include adaptiveValue(height, 18px, 10px, 1440px, 390px);
+                }
+            }
 
             img {
                 display: flex;
@@ -120,8 +144,41 @@
         }
     }
 
+    
+
     &__slider {
         overflow: hidden;
+
+        .testimonials__pagination {
+            display: flex;
+           
+            width: fit-content;
+            column-gap: 6px;
+            row-gap: 6px;
+            margin-left: auto;
+            margin-bottom: 8px;
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+
+            @include adaptiveValue(bottom, 64px, 6px, 1440px, 390px);
+
+            .swiper-pagination-bullet {
+                transition: .2s ease;
+                opacity: .1;
+                width: 9px;
+                height: 9px;
+                margin: 0;
+            }
+            .swiper-pagination-bullet-active {
+                transition: .2s ease;
+                background-color: var(--primary-accent);
+                opacity: 1;
+            }
+        
+        }
 
         &--buttons {
             display: flex;
@@ -135,6 +192,7 @@
                 font-family: var(--font-family);
                 font-weight: 600;
                 font-size: 13px;
+                @include adaptiveValue(font-size, 13px, 11px, 1440px, 467px);
                 letter-spacing: 0.01em;
 
                 

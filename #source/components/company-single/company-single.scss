@@ -17,7 +17,7 @@
         background: var(--secondary-color-1);
     }
     &__top {
-        @include adaptiveValue(margin-bottom, 72px, 32px, 1440px, 467px)
+        
     }
     &__profile {
         
@@ -235,6 +235,8 @@
     // switching tabs
 
     &__about {
+        @include adaptiveValue(margin-top, 72px, 32px, 1440px, 467px);
+
         padding: 0 20px 62px;
         padding-bottom: 62px;
 
@@ -294,6 +296,8 @@
     }
 
     &__score {
+        @include adaptiveValue(padding-top, 26px, 32px, 1440px, 467px);
+
         padding: 0 20px 62px;
         padding-bottom: 62px;
 
@@ -313,7 +317,7 @@
             text-align: center;
             color: var(--neutral-800);
             
-            @include adaptiveValue(margin-bottom, 36px, 16px, 1440px, 467px);
+            @include adaptiveValue(margin-bottom, 24px, 16px, 1440px, 467px);
 
             .green {
                 color: #26e900;
@@ -328,6 +332,23 @@
             line-height: 135%;
             text-align: center;
             color: #6f6f73;   
+
+            img {
+                display: flex;
+                object-fit: cover;
+                width: 100%;
+
+                margin-bottom: 8px;
+
+                margin-top: -16px;
+            }
+
+            .ghost-scale__scores {
+                @include adaptiveValue(margin-bottom, 26px, 14px, 1440px, 567px);
+            }
+            .ghost-scale__score {
+                color: #6f6f73;
+            }
 
             h3 {
                 @include adaptiveValue(font-size, 46px, 20px, 1440px, 390px);

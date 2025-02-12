@@ -2,7 +2,7 @@
     background: var(--neutral-200);
     
     padding-bottom: 400px;
-
+    @include adaptiveValue(padding-bottom, 320px, 124px, 1440px, 567px);
     &__container {
         max-width: 1190px;
         padding: 0 20px;

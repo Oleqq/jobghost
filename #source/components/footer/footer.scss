@@ -102,10 +102,30 @@
         display: flex;
         gap: 12px;
 
+        transition: .2s ease;
+
+        svg {
+            cursor: pointer;
+            transition: .2s ease;
+
+            &:hover {
+                transition: .2s ease;
+                transform: scale(1.1);
+            }
+        }
+
+        
+
         img {
             width: 100%;
             display: flex;
             object-fit: cover;
+            transition: .2s ease;
+
+            &:hover {
+                transition: .2s ease;
+                transform: scale(1.1);
+            }
         }
     }
 }

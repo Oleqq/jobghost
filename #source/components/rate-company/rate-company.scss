@@ -32,8 +32,8 @@
             max-width: 145px;
             max-height: 73px;
 
-            @include adaptiveValue(max-width, 145px, 100px, 1440px, 467px);
-            @include adaptiveValue(max-height, 73px, 50px, 1440px, 467px);
+            @include adaptiveValue(max-width, 145px, 70px, 1440px, 367px);
+            @include adaptiveValue(max-height, 73px, 40px, 1440px, 367px);
         }
         
         h3 {
@@ -159,7 +159,9 @@
                 line-height: 125%;
                 text-align: center;
                 color: var(--neutral-600);  
-                
+                max-width: 750px;
+                margin-left: auto;
+                margin-right: auto;
                 @include adaptiveValue(margin-bottom, 62px, 42px, 1440px, 467px);
             }
         }

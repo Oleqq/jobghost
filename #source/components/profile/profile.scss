@@ -63,6 +63,16 @@
 
         margin-bottom: 22px;
         @include adaptiveValue(margin-bottom, 22px, 14px, 1440px, 567px);
+
+        padding-left: 144px;
+
+        @include adaptiveValue(padding-left, 144px, 225px, 1440px, 1240px);
+
+        @media (max-width:1240px) {
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+        }
     }
     
     &__blocks {
@@ -131,6 +141,15 @@
                 .col {
                     justify-content: center;
                     
+                    &.avatar {
+                        position: relative;
+                        svg {
+                            position: absolute;
+                            right: -6px;
+                            bottom: 0;
+                            height: 100%;
+                        }
+                    }
                 }
 
                 .profile-name {
@@ -162,7 +181,10 @@
                 justify-content: space-between;
 
                 margin-bottom: 48px;
-                @include adaptiveValue(margin-bottom, 48px, 16px, 1440px, 567px);
+                @include adaptiveValue(margin-bottom, 24px, 16px, 1440px, 567px);
+
+                @include adaptiveValue(padding-bottom, 24px, 16px, 1440px, 567px);
+                border-bottom: 1px solid #F3F4F6;
 
                 > :not(.changable) {
                     font-family: var(--font-family);
@@ -193,6 +215,23 @@
                 background: #2489ff;
 
                 width: fit-content;
+
+                transition: .2s ease;
+
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+
+                cursor: pointer;
+
+                &:hover {
+                    transition: .2s ease;
+                    transform: scale(1.05);
+                }
+                &:focus, &:active, &:focus-visible, &:focus-within {
+                    transition: .2se all;
+                    transform: scale(1.025);
+                }
             }
 
         }
@@ -252,6 +291,8 @@
 
                 cursor: pointer;
 
+                position: relative;
+
                 &:hover {
 
                     &.arrow::before{
@@ -276,6 +317,45 @@
 
                 &.justify-content-space-between {
                     justify-content: space-between;
+                }
+
+
+                
+
+                select {
+                    
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 150%;
+                    color: #4b5563;
+
+                    option {
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 150%;
+                        color: #4b5563;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        right: 15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 18px;
+                        height: 18px;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M3.75 6.375L9 11.625L14.25 6.375' stroke='%23171728' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        pointer-events: none;
+                    }
+                    
                 }
                 
             }

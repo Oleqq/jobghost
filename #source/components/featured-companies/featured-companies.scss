@@ -49,12 +49,24 @@
         border-radius: 12px;
         padding: 40px 32px 48px 32px;
 
+        width: 100%;
+        max-width: 321px;
+        @include adaptiveValue(max-width, 321px, 200px, 1440px, 467px);
+
         @include adaptiveValue(padding-top, 40px, 20px, 1440px, 467px);
         @include adaptiveValue(padding-right, 32px, 16px, 1440px, 467px);
         @include adaptiveValue(padding-bottom, 48px, 24px, 1440px, 467px);
         @include adaptiveValue(padding-left, 32px, 16px, 1440px, 467px);
 
+        @media (max-width:767px) {
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 100%;
 
+            br {
+                display: none;
+            }
+        }
 
         h4 {
             font-family: var(--font-family);
@@ -96,8 +108,10 @@
 
         margin-bottom: 16px;
 
+        background: var(--secondary-color-2);
+
         @include adaptiveValue(padding-top, 24px, 18px, 1440px, 767px);
-        @include adaptiveValue(padding-right, 24px, 18px, 1440px, 767px);
+        @include adaptiveValue(padding-right, 24px, 10px, 1440px, 767px);
         @include adaptiveValue(padding-bottom, 24px, 18px, 1440px, 767px);
         @include adaptiveValue(padding-left, 16px, 10px, 1440px, 767px);
 
@@ -119,7 +133,7 @@
             a {
                 font-family: var(--font-family);
                 font-weight: 600;
-                @include adaptiveValue(font-size, 14px, 10px, 1440px, 467px);
+                @include adaptiveValue(font-size, 14px, 8px, 1440px, 467px);
                 line-height: 114%;
                 text-decoration: underline;
                 text-decoration-skip-ink: none;
@@ -189,7 +203,7 @@
             a {
                 font-family: var(--font-family);
                 font-weight: 600;
-                @include adaptiveValue(font-size, 14px, 10px, 1440px, 467px);
+                @include adaptiveValue(font-size, 14px, 8px, 1440px, 467px);
                 line-height: 114%;
                 text-decoration: underline;
                 text-decoration-skip-ink: none;
